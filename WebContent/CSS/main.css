@@ -1,0 +1,121 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	font-size:small;
+	/* background: #42413C; */
+	background-position:center;
+	background-image:url(../IMAGES/wallpaper.jpg);
+	background-size:auto;
+	background-repeat:repeat;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF; 
+}
+/* ~~ Element-/Tag-Selektoren ~~ */
+ul, ol, dl { /* Aufgrund von Abweichungen zwischen verschiedenen Browsern empfiehlt es sich, die Auffüllung und den Rand in Listen auf 0 einzustellen. Zu Konsistenzzwecken können Sie die gewünschten Werte entweder hier oder in den enthaltenen Listenelementen (LI, DT, DD) eingeben. Beachten Sie, dass die hier eingegebenen Werte hierarchisch auf die .nav-Liste angewendet werden, sofern Sie keinen spezifischeren Selektor festlegen. */
+	padding: 0;
+	margin: 0;
+	
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* Durch Verschieben des oberen Rands wird das Problem behoben, dass Ränder aus dem zugehörigen div-Tag geraten können. Der übrig gebliebene untere Rand hält ihn getrennt von allen folgenden Elementen. */
+	padding-right: 15px;
+	padding-left: 15px; /* Durch Hinzufügen der Auffüllung zu den Seiten der Elemente innerhalb der div-Tags anstelle der div-Tags selbst entfallen jegliche Box-Modell-Berechnungen. Alternativ kann auch ein verschachteltes div-Tag mit seitlicher Auffüllung verwendet werden. */
+}
+a img { /* Dieser Selektor entfernt den standardmäßigen blauen Rahmen, der in einigen Browsern um ein Bild angezeigt wird, wenn es von einem Hyperlink umschlossen ist. */
+	border: none;
+}
+/* ~~ Die Reihenfolge der Stildefinitionen für die Hyperlinks der Site, einschließlich der Gruppe der Selektoren zum Erzeugen des Hover-Effekts, muss erhalten bleiben. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* Sofern Ihre Hyperlinks nicht besonders hervorgehoben werden sollen, empfiehlt es sich, zur schnellen visuellen Erkennung Unterstreichungen zu verwenden. */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* Durch diese Gruppe von Selektoren wird bei Verwendung der Tastatur der gleiche Hover-Effekt wie beim Verwenden der Maus erzielt. */
+	text-decoration: none;
+}
+
+/* ~~ Tabellen Informationen ~~ */
+
+
+/* ~~ Headertabelle ~~ */
+.headertab {	
+	width: 100%;
+	padding:5px;
+	background-color:#383838;
+}
+.headername {
+	width: 20%;
+	text-align: left;
+}
+.headersearch {
+	width: 60%;
+	text-align: center;
+}
+.headerdate {
+	width: 20%;
+	text-align: right;
+}
+
+
+
+/* ~~ Fußzeilentabelle ~~ */
+
+.footertab {
+	width: 100%;
+	padding:5px;
+	background-color:#383838;
+}
+
+.footer1 {
+	width: 20%;
+	text-align: left;
+}
+
+.footer2 {
+	width: 60%;
+	text-align: center;
+}
+
+.footer3 {	
+	width: 20%;
+	text-align: right;
+}
+
+
+/* ~~ Container umschließt die anderen div-Tags. ~~ */
+.container {
+	width: 95%;
+	height: 100%;
+	margin: 0 auto; /* Der mit der Breite gekoppelte automatische Wert an den Seiten zentriert das Layout. */
+}
+
+/* ~~ Kopfzeile ~~ */
+.header {
+	position:absolute;
+ 	left:0px;
+ 	right:0px;
+	top:0px; 
+	padding: 0px;
+}
+
+/* ~~ Inhalt ~~ */
+.content {
+	position:absolute;
+	height:87%;
+	top:50px;
+	left:0px;
+	right:0px;
+	text-align: center;		
+}
+/* ~~ Fußzeile ~~ */
+.footer {
+ 	position:fixed;
+ 	left:0px;
+ 	right:0px;
+	bottom:0px; 
+	padding: 0px;
+}
