@@ -1,162 +1,162 @@
 
 public class MitarbeiterDTO {
 
-	int idMitarbeiter;
-	String vorname;
-	String nachname;
-	String geburtsdatum;
-	String sozialversicherungsNr;
-	String straﬂe;
-	int plz;
-	String ort;
-	String email;
-	String telefonnummer;
-	String username;
-	String password;
+	private Long idMitarbeiter;
+	private String vorname;
+	private String nachname;
+	private String geburtsdatum;
+	private String sozialversicherungsNr;
+	private String straﬂe;
+	private int plz;
+	private String ort;
+	private String email;
+	private String telefonnummer;
+	private String username;
+	private String password;
+	
 	/**
 	 * @return the idMitarbeiter
 	 */
-	private int getIdMitarbeiter() {
+	public Long getIdMitarbeiter() {
 		return idMitarbeiter;
 	}
 	/**
 	 * @param idMitarbeiter the idMitarbeiter to set
 	 */
-	private void setIdMitarbeiter(int idMitarbeiter) {
+	public void setIdMitarbeiter(Long idMitarbeiter) {
 		this.idMitarbeiter = idMitarbeiter;
 	}
 	/**
 	 * @return the vorname
 	 */
-	private String getVorname() {
+	public String getVorname() {
 		return vorname;
 	}
 	/**
 	 * @param vorname the vorname to set
 	 */
-	private void setVorname(String vorname) {
+	public void setVorname(String vorname) {
 		this.vorname = vorname;
 	}
 	/**
 	 * @return the nachname
 	 */
-	private String getNachname() {
+	public String getNachname() {
 		return nachname;
 	}
 	/**
 	 * @param nachname the nachname to set
 	 */
-	private void setNachname(String nachname) {
+	public void setNachname(String nachname) {
 		this.nachname = nachname;
 	}
 	/**
 	 * @return the geburtsdatum
 	 */
-	private String getGeburtsdatum() {
+	public String getGeburtsdatum() {
 		return geburtsdatum;
 	}
 	/**
 	 * @param geburtsdatum the geburtsdatum to set
 	 */
-	private void setGeburtsdatum(String geburtsdatum) {
+	public void setGeburtsdatum(String geburtsdatum) {
 		this.geburtsdatum = geburtsdatum;
 	}
 	/**
 	 * @return the sozialversicherungsNr
 	 */
-	private String getSozialversicherungsNr() {
+	public String getSozialversicherungsNr() {
 		return sozialversicherungsNr;
 	}
 	/**
 	 * @param sozialversicherungsNr the sozialversicherungsNr to set
 	 */
-	private void setSozialversicherungsNr(String sozialversicherungsNr) {
+	public void setSozialversicherungsNr(String sozialversicherungsNr) {
 		this.sozialversicherungsNr = sozialversicherungsNr;
 	}
 	/**
 	 * @return the straﬂe
 	 */
-	private String getStraﬂe() {
+	public String getStraﬂe() {
 		return straﬂe;
 	}
 	/**
 	 * @param straﬂe the straﬂe to set
 	 */
-	private void setStraﬂe(String straﬂe) {
+	public void setStraﬂe(String straﬂe) {
 		this.straﬂe = straﬂe;
 	}
 	/**
 	 * @return the plz
 	 */
-	private int getPlz() {
+	public int getPlz() {
 		return plz;
 	}
 	/**
 	 * @param plz the plz to set
 	 */
-	private void setPlz(int plz) {
+	public void setPlz(int plz) {
 		this.plz = plz;
 	}
 	/**
 	 * @return the ort
 	 */
-	private String getOrt() {
+	public String getOrt() {
 		return ort;
 	}
 	/**
 	 * @param ort the ort to set
 	 */
-	private void setOrt(String ort) {
+	public void setOrt(String ort) {
 		this.ort = ort;
 	}
 	/**
 	 * @return the email
 	 */
-	private String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 	/**
 	 * @param email the email to set
 	 */
-	private void setEmail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	/**
 	 * @return the telefonnummer
 	 */
-	private String getTelefonnummer() {
+	public String getTelefonnummer() {
 		return telefonnummer;
 	}
 	/**
 	 * @param telefonnummer the telefonnummer to set
 	 */
-	private void setTelefonnummer(String telefonnummer) {
+	public void setTelefonnummer(String telefonnummer) {
 		this.telefonnummer = telefonnummer;
 	}
 	/**
 	 * @return the username
 	 */
-	private String getUsername() {
+	public String getUsername() {
 		return username;
 	}
 	/**
 	 * @param username the username to set
 	 */
-	private void setUsername(String username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 	/**
 	 * @return the password
 	 */
-	private String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 	/**
 	 * @param password the password to set
 	 */
-	private void setPassword(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 	
 }
