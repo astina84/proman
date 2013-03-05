@@ -1,4 +1,5 @@
-public class Mitarbeiter {
+
+public class MitarbeiterDTO {
 
 	int idMitarbeiter;
 	String vorname;

@@ -37,7 +37,7 @@
   <div class="footer">
  	<table class="footertab">
   	<tr>
-  	<td class="footer1">Bearbeiter: Jasmir Dzidic</td>
+  	<td class="footer1">Bearbeiter</td>
   	<td class="footer2">Administrator</td>
   	<td class="footer3">Einstellungen</td>
  	</tr>
