@@ -87,7 +87,7 @@ public class HelloWorldServlet extends HttpServlet {
 		    	  
 		    	  if(count>0)
 		    	  {
-			    	  out.println("Herzlichen Glückwunsch eingelogt!"+ username);
+			    	  out.println("Sie haben sich angemeldet"+ username);
 		    	  }
 		    	  else
 		    	  {
@@ -96,7 +96,7 @@ public class HelloWorldServlet extends HttpServlet {
 		    }
 		    else
 		    {
-	    	  out.println("Du musst es noch einmal Probieren");
+	    	  out.println("Benutzername und Passwortfelder dürfen nicht leer sein !");
 	    	}
 	    	System.out.println("Connected to the database"); 
 	    	conn.close();
