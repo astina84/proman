@@ -1,0 +1,12 @@
+<Context path="/proman" docBase="${WORKSPACE}/proman/web">
+  <Resource name="datasource" 
+            type="javax.sql.DataSource"
+            auth="Container"
+            maxActive="10"
+            maxIdle="3" 
+            maxWait="10000"
+            username="d0140088" 
+            password="u1337freak" 
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://dd8516.kasserver.com/" />
+</Context>
