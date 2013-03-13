@@ -1,4 +1,4 @@
-<Context path="/proman" docBase="${WORKSPACE}/proman/web">
+<Context path="/proman" docBase="${WORKSPACE}/proman/WebContent">
   <Resource name="datasource" 
             type="javax.sql.DataSource"
             auth="Container"
