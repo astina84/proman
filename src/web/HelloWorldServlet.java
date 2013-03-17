@@ -3,8 +3,12 @@ package web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.*;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,6 +37,8 @@ public class HelloWorldServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
+		
 	}
 
 	/**
@@ -103,9 +109,9 @@ public class HelloWorldServlet extends HttpServlet {
 		    {
 	    	  out.println("Benutzername und Passwortfelder dürfen nicht leer sein !");
 	    	}
-	    	System.out.println("Connected to the database"); 
+	//    	System.out.println("Connected to the database"); 
 	    	conn.close();
-	        System.out.println("Disconnected from database");
+	//      System.out.println("Disconnected from database");
 	        
 		    } catch(Throwable t) {
 					out.println("<PRE>");

@@ -26,11 +26,10 @@ $(document).ready(function(){
 		//alert("Hallo");
  		$.ajax({
 			  type: "POST",
-			  url: "http://localhost:8080/proman/HelloWorldServlet",
+			  url: "http://localhost:8080/proman/MitarbeiterTabelle",
 			  data: { username: username , password: userpass }
 			  }).done(function( msg ) {
 			  $(".content").html(msg);
-			  //$(".content").append(msg);
 			  $(".overlay").fadeOut("slow");
 			  $(".loginformular").fadeOut("slow");
 			});

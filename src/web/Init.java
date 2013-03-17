@@ -11,27 +11,32 @@ import javax.sql.DataSource;
 
 public class Init implements ServletContextListener {
 
+	public Init(){
+		
+		System.out.println("Init File geladen");
+		
+	}
         
     public void contextDestroyed(ServletContextEvent sce) {
     }
     
     private void contextInitialized2(ServletContext servletContext)
     throws Exception {
-       InitialContext enc = new InitialContext();
-       Context compContext = (Context) enc.lookup("java:comp/env");
-       DataSource dataSource = (DataSource) compContext.lookup("datasource");
-       DataAccessObject.setDataSource(dataSource);
+    	 InitialContext enc = new InitialContext();
+         DataSource dataSource = (DataSource)enc.lookup("java:comp/env/datasource");
+         DataAccessObject.setDataSource(dataSource);
     }
 
     public void contextInitialized(ServletContextEvent sce) {
-        ServletContext servletContext = sce.getServletContext();
+         ServletContext servletContext = sce.getServletContext();
         try {
            contextInitialized2(servletContext);
         }
         catch (Exception e)
         {
+         //  System.out.println(e);
+          throw new RuntimeException(e); 
            
-           throw new RuntimeException(e);
         }
         
     }
