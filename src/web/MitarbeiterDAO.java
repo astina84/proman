@@ -32,6 +32,53 @@ public class MitarbeiterDAO extends DataAccessObject {
 		   }
 		}
 	
+	public MitarbeiterDTO find(String username) {
+		   ResultSet rs = null;
+		   PreparedStatement statement = null;
+		   Connection connection = null;
+		   try {
+		      connection = getConnection();
+		      String sql = "select * from Mitarbeiter where username=?";
+		      statement = connection.prepareStatement(sql);
+		      statement.setString(1, username);
+		      rs = statement.executeQuery();
+		      if (!rs.next()) {
+		         return null;
+		      }
+		      return read(rs);
+		   }
+		   catch (SQLException e) {
+		      throw new RuntimeException(e);
+		   }
+		   finally {
+		      close(rs, statement, connection);
+		   }
+		}
+	
+	public MitarbeiterDTO checkPassword(String username,String password) {
+		   ResultSet rs = null;
+		   PreparedStatement statement = null;
+		   Connection connection = null;
+		   try {
+		      connection = getConnection();
+		      String sql = "select * from Mitarbeiter where Username=? and Password=?";
+		      statement = connection.prepareStatement(sql);
+		      statement.setString(1, username);
+		      statement.setString(2, password);
+		      rs = statement.executeQuery();
+		      if (!rs.next()) {
+		         return null;
+		      }
+		      return read(rs);
+		   }
+		   catch (SQLException e) {
+		      throw new RuntimeException(e);
+		   }
+		   finally {
+		      close(rs, statement, connection);
+		   }
+		}
+	
 	private MitarbeiterDTO read(ResultSet rs) throws SQLException {
 		
 		   Long id = new Long(rs.getLong("idMitarbeiter"));

@@ -10,6 +10,9 @@
 
 $(document).ready(function(){
 
+	$(".overlay").fadeIn("fast");	
+	
+	
 	//Login Formular Fade IN
 	
 	$(".loginformular").delay("slow").fadeIn("slow");
@@ -26,7 +29,7 @@ $(document).ready(function(){
 		//alert("Hallo");
  		$.ajax({
 			  type: "POST",
-			  url: "http://localhost:8080/proman/HelloWorldServlet",
+			  url: "http://localhost:8080/proman/Login",
 			  data: { username: username , password: userpass }
 			  }).done(function( msg ) {
 			  $(".content").html(msg);
