@@ -7,9 +7,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -63,6 +66,10 @@ public class HelloWorldServlet extends HttpServlet {
 		String dbUsername = "d0140088";
 		String dbPassword = "u1337freak";
 		
+		Date firstdate = new Date();
+		
+		
+		
 		System.out.println("Connection");
 		
 		Statement st=null;
@@ -82,32 +89,43 @@ public class HelloWorldServlet extends HttpServlet {
 		    {
 		    	  username = request.getParameter("username").toString();
 		    	  userpass = request.getParameter("password").toString();
-		    	  System.out.println(username + " " + userpass);
+		    	  
 		    	  strQuery="select * from Mitarbeiter where Username='"+username+"' and  Password='"+userpass+"'";
-		    	  System.out.println(strQuery);
+		    	  
 		    	  st = conn.createStatement();
 		    	  rs = st.executeQuery(strQuery);
+		    	  
 		    	  int count=0;
 		    	
 		    	  while(rs.next())
 		    	  {
-			    	  session.setAttribute("username",rs.getString(1));
+			    	  session.setAttribute("username",rs.getString(2));
 			    	  count++;
 		    	  }
 		    	  
 		    	  if(count>0)
 		    	  {
-		    		  System.out.println("login");
-			    	  out.println("Sie haben sich angemeldet"+ username);
+		    		  System.out.println("login = erfolgreich");
+		    		  		    		  
+			    	  out.println("Sie haben sich angemeldet: " + session.getAttribute("username") +"<br>");
+			    	  out.println("Ihre ID: " + session.getId() + "<br>");
+			    	  out.println("erster Login: "+new Date(session.getCreationTime()) + "<br>");
+			    	  
 		    	  }
 		    	  else
 		    	  {
-			    	  out.println("Du musst es noch einmal Probieren");
+		    		  System.out.println(" login = fehlgeschlagen ( Benutzeranmeldung ) ");
+		    		  RequestDispatcher view=request.getRequestDispatcher("./JSP/login.jsp");
+		    		  view.include(request, response);
+			    	  session.invalidate();
 		    	  }
 		    }
 		    else
 		    {
-	    	  out.println("Benutzername und Passwortfelder dürfen nicht leer sein !");
+		    	  System.out.println(" login = fehlgeschlagen ( Felder leer ) ");
+	    		  RequestDispatcher view=request.getRequestDispatcher("./JSP/login.jsp");
+	    		  view.include(request, response);
+		    	  session.invalidate();
 	    	}
 	//    	System.out.println("Connected to the database"); 
 	    	conn.close();

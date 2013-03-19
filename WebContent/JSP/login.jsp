@@ -26,7 +26,7 @@ $(document).ready(function(){
 		//alert("Hallo");
  		$.ajax({
 			  type: "POST",
-			  url: "http://localhost:8080/proman/MitarbeiterTabelle",
+			  url: "http://localhost:8080/proman/HelloWorldServlet",
 			  data: { username: username , password: userpass }
 			  }).done(function( msg ) {
 			  $(".content").html(msg);
