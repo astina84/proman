@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 <% 
 out.println("Dieser Text wurde im request Parameter username übergeben ! : ");
-out.println(request.getParameter("username <br>"));
+out.println(request.getParameter("username"));
 
 out.println("Dieser Text wurde mit sessions Attribute username übergeben ! : ");
 out.println( session.getAttribute("username") );

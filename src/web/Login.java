@@ -50,11 +50,12 @@ public class Login extends HttpServlet {
 
 			if (mitarbeiter != null)
 			{
-				session.setAttribute("username", mitarbeiter.getVorname());
+				session.setAttribute("vorname", mitarbeiter.getVorname());
+				session.setAttribute("nachname", mitarbeiter.getNachname());
 					
 		    	System.out.println("login = erfolgreich");
 		    			    		    	
-				RequestDispatcher view=request.getRequestDispatcher("./JSP/test.jsp");
+				RequestDispatcher view=request.getRequestDispatcher("./JSP/maincontainer.jsp");
 				view.include(request, response);
   
 //			    out.println("Sie haben sich angemeldet: " + session.getAttribute("username") +"<br>");
@@ -63,6 +64,7 @@ public class Login extends HttpServlet {
 			}
 			else
 			{
+				// TODO Benutzername bei Fehlermeldung ausgeben und erklären wieso es nicht geht.
 				System.out.println("login = fehlgeschlagen ( Benutzeranmeldung ) ");
 				RequestDispatcher view=request.getRequestDispatcher("./JSP/login.jsp");
 				view.include(request, response);

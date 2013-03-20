@@ -66,9 +66,6 @@ public class HelloWorldServlet extends HttpServlet {
 		String dbUsername = "d0140088";
 		String dbPassword = "u1337freak";
 		
-		Date firstdate = new Date();
-		
-		
 		
 		System.out.println("Connection");
 		

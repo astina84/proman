@@ -23,7 +23,7 @@
   	<td class="headersearch"><form><input></input><button>OK</button></form></td>
   	<td class="headerdate">
   	<% Date date = new java.util.Date();%>
-  	<% out.println(date.toLocaleString());%></td>
+  	<% out.println(date);%></td>
   	</tr>
   	</table> 
   <!-- end .header -->
