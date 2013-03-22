@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../SCRIPTS/jquery.js"></script>
 </head>
 <body>
-<div class="overlay"></div>
+
 <div class="container">
   <!-- start .header -->
   <div class="header">
@@ -30,7 +30,12 @@
   </div>
   <!-- start .content -->
   <div class="content">
-	<jsp:include page="../JSP/login.jsp"></jsp:include>
+<% if ( session.isNew() ){ %>
+	<%@ include file="../JSP/login.jsp" %>
+<%}%>
+
+<jsp:include page="../JSP/maincontainer.jsp"/>
+
   <!-- end .content -->
   </div>
   <!-- start .footer --> 

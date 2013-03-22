@@ -18,7 +18,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="menu">menu</div>
+<div class="menu"><jsp:include page="../JSP/menu.jsp"></jsp:include></div>
 <div class="maincontent">maincontent</div>
 
 </html>

@@ -57,7 +57,7 @@ $(document).ready(function(){
 });
 	
 </script>
-
+<div class="overlay"></div>
 <div class="loginformular">
 		<table>
 			<tr>
